@@ -4,17 +4,13 @@ A simple fake store with a shopping cart. This application uses React hooks and 
 
 ## Project: Shopping Cart
 
-The project is from The Odin Project [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart). Or see the Assignment Below.
+The project is from The Odin Project [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart), or see the Assignment Below.
 
 ### Overview
 
 #### **Features:**
 
-- You add all identifying information such as name, phone number, email, location and github.
-- You can add and delete your work experience.
-- Your experience includes the company you work for, the title of your position, the date you started, the date you ended work there and a description about what the position entails.
-- You can add and delete your education.
-- Your education includes where you attended school, degree you received, the time you started school and when you finished.
+-
 
 #### **Tools:**
 
