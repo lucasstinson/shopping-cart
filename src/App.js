@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./components/Nav";
-import "./styles/app.css";
+import Footer from "./components/Footer";
+import "./styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./pages/Shop";
 import Home from "./pages/Home";
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
