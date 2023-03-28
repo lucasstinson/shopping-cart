@@ -8,6 +8,7 @@ a {
   color: white;
   text-decoration: none;
 }
+
 .nav-bar {
   background-color: #24292f;
   color: white;
@@ -20,10 +21,16 @@ a {
   align-items: center;
 }
 
-/* .logo-img {
-  height: 100px;
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo-img {
+  height: 40px;
   width: auto;
-} */
+}
 
 .nav-links {
   font-weight: 700;
