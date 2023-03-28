@@ -149,6 +149,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .home-page-contents {
+    gap: 10px;
+  }
+
   .home-page-header {
     margin-top: 10px;
     height: 60vh;
@@ -164,7 +168,6 @@ a {
 
   .tag-line-1,
   .tag-line-2 {
-    font-size: 20px;
     text-align: center;
   }
   .home-page-banner {
@@ -176,7 +179,7 @@ a {
 @media (max-width: 1020px) {
   .tag-line-1,
   .tag-line-2 {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 

@@ -20,7 +20,7 @@ const HomePage = () => {
         </Link>
         <div className="home-page-button-container">
           <div className="tag-line-2">
-            Explore our products to get up an running immediately.
+            Explore our products and get up and running immediately.
           </div>
           <button className="shop-button">Shop Now</button>
         </div>
