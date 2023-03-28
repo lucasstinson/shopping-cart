@@ -1,11 +1,24 @@
 import React from "react";
 import Nav from "./components/Nav";
 import "./styles/app.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Shop from "./pages/Shop";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
     <div className="App">
-      <Nav />
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
