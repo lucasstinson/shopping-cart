@@ -4,6 +4,11 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -11,10 +16,6 @@ body {
 }
 
 /* nav styles  */
-a {
-  color: white;
-  text-decoration: none;
-}
 
 .nav-bar {
   background-color: #24292f;
@@ -26,16 +27,17 @@ a {
 .nav-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-logo a {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .logo-img {
-  height: 40px;
+  height: 35px;
   width: auto;
 }
 
@@ -44,9 +46,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 50px;
+  gap: 30px;
   padding: 10px;
   font-size: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .shopping-cart-container {
@@ -71,9 +78,94 @@ a {
   padding: 2px 5px;
 }
 
-/* nav styles */
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    background-color: #24292f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
-/* footer styles */
+/* Home styles */
+
+.home-page-contents {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 10px;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #24292f;
+  font-size: 40px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-page-banner {
+  border-radius: 10px;
+  height: 500px;
+}
+
+.home-page-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.tag-line-2 {
+  font-weight: 700;
+  color: #24292f;
+  font-size: 25px;
+}
+
+.shop-button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background-color: #24292f;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid #24292f;
+  margin-bottom: 10px;
+}
+
+.shop-button:hover {
+  background-color: white;
+  color: #24292f;
+  transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .banner-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tag-line-1,
+  .tag-line-2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .home-page-banner {
+    border-radius: 10px;
+    height: 200px;
+  }
+}
+
+/* Footer styles */
 
 .footer-container {
   background-color: #24292f;
