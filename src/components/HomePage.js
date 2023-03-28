@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import computerDepot from "../assets/images/computer-depot.jpeg";
 
 const HomePage = () => {
@@ -10,11 +11,13 @@ const HomePage = () => {
         </div>
       </div>
       <div className="banner-container">
-        <img
-          className="home-page-banner"
-          src={computerDepot}
-          alt="computer part warehouse"
-        ></img>
+        <Link to="/shop">
+          <img
+            className="home-page-banner"
+            src={computerDepot}
+            alt="computer part warehouse"
+          ></img>
+        </Link>
         <div className="home-page-button-container">
           <div className="tag-line-2">
             Explore our products to get up an running immediately.
