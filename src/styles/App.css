@@ -91,7 +91,7 @@ a {
 /* Home styles */
 
 .home-page-contents {
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -133,8 +133,8 @@ a {
 }
 
 .shop-button {
-  padding: 10px 18px;
-  border-radius: 25px;
+  padding: 10px 30px;
+  border-radius: 10px;
   background-color: #24292f;
   color: white;
   font-size: 20px;
@@ -151,12 +151,20 @@ a {
 
 @media (max-width: 600px) {
   .home-page-contents {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 10px;
+  }
+
+  .home-page-contents {
     gap: 10px;
   }
 
   .home-page-header {
     margin-top: 10px;
-    height: 60vh;
     display: flex;
     flex-direction: column;
   }
@@ -178,6 +186,10 @@ a {
 }
 
 @media (max-width: 1020px) {
+  .home-page-contents {
+    height: 70vh;
+  }
+
   .tag-line-1,
   .tag-line-2 {
     font-size: 20px;

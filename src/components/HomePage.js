@@ -5,11 +5,6 @@ import computerDepot from "../assets/images/computer-depot.jpeg";
 const HomePage = () => {
   return (
     <div className="home-page-contents">
-      <div className="home-page-header">
-        <div className="tag-line-1">
-          Everything you need to build a computer.
-        </div>
-      </div>
       <div className="banner-container">
         <Link to="/shop">
           <img
@@ -19,10 +14,17 @@ const HomePage = () => {
           ></img>
         </Link>
         <div className="home-page-button-container">
-          <div className="tag-line-2">
-            Explore our products and get up and running immediately.
+          <div className="home-page-header">
+            <div className="tag-line-1">
+              Everything you need to build a computer.
+            </div>
           </div>
-          <button className="shop-button">Shop Now</button>
+          <div className="tag-line-2">
+            Explore our products and get up and running.
+          </div>
+          <Link to="/shop">
+            <button className="shop-button">Shop Now</button>
+          </Link>
         </div>
       </div>
     </div>
