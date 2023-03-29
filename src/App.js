@@ -102,9 +102,28 @@ const App = () => {
     },
   ]);
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([
+    {
+      id: 0,
+      title: "AMD Ryzen 7 5800X Processor",
+      price: 199.99,
+      image: amdCPU,
+      count: 1,
+    },
+  ]);
 
-  const addItem = () => {};
+  const addItem = () => {
+    setCart([
+      ...cart,
+      {
+        id: 0,
+        title: "AMD Ryzen 7 5800X Processor",
+        price: 199.99,
+        image: amdCPU,
+        count: 1,
+      },
+    ]);
+  };
 
   return (
     <div className="App">
