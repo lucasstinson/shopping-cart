@@ -102,6 +102,10 @@ const App = () => {
     },
   ]);
 
+  const [cart, setCart] = useState([]);
+
+  const addItem = () => {};
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -114,7 +118,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-      <Cart />
+      <Cart products={products} cart={cart} />
     </div>
   );
 };
