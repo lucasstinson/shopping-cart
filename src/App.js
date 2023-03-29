@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Shop from "./pages/Shop";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
+import Cart from "./components/Cart";
 import "./styles/App.css";
 import "./styles/Shop.css";
 import "./styles/Contact.css";
 import "./styles/Home.css";
 import "./styles/Nav.css";
+import "./styles/Cart.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Shop from "./pages/Shop";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Checkout from "./pages/Checkout";
 import amdCPU from "./assets/images/shop-items/amd-cpu.jpg";
 import motherboard from "./assets/images/shop-items/asus-mobo.jpg";
 import heatSink from "./assets/images/shop-items/cpu-heat-sink.jpg";
@@ -112,6 +114,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
+      <Cart />
     </div>
   );
 };
