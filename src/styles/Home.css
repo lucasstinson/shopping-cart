@@ -1,0 +1,111 @@
+.home-page-contents {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 10px;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #24292f;
+  font-size: 40px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-page-banner {
+  border-radius: 10px;
+  height: 500px;
+}
+
+.home-page-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.tag-line-2 {
+  font-weight: 700;
+  color: #24292f;
+  font-size: 25px;
+}
+
+.shop-button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #24292f;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid #24292f;
+  margin-bottom: 10px;
+}
+
+.shop-button:hover {
+  background-color: white;
+  color: #24292f;
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .home-page-contents {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 10px;
+  }
+
+  .home-page-contents {
+    gap: 10px;
+  }
+
+  .home-page-header {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tag-line-1,
+  .tag-line-2 {
+    text-align: center;
+  }
+  .home-page-banner {
+    border-radius: 10px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .home-page-contents {
+    height: 65vh;
+  }
+
+  .tag-line-1,
+  .tag-line-2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .home-page-banner {
+    border-radius: 10px;
+    height: 140px;
+  }
+}
