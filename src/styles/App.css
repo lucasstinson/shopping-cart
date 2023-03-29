@@ -209,7 +209,7 @@ a {
   font-weight: 700;
 }
 
-.contact-logo-container {
+.logo-link-container {
   display: flex;
   gap: 60px;
 }
@@ -238,9 +238,10 @@ a {
     font-size: 20px;
   }
 
-  .contact-logo-container {
+  .logo-link-container {
     gap: 20px;
   }
+
   .contact-page-content img {
     height: 50px;
   }

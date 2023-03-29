@@ -4,6 +4,7 @@ import discordLogo from "../assets/images/discord-logo.jpeg";
 import twitterLogo from "../assets/images/twitter-logo.png";
 import telegramLogo from "../assets/images/telegram-logo.png";
 import instagramLogo from "../assets/images/instagram-logo.png";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   return (
@@ -19,27 +20,32 @@ const ContactPage = () => {
         </p>
       </div>
       <div className="contact-logo-container">
-        <img src={githubLogo} className="github-logo" alt="github logo"></img>
-        <img
-          src={discordLogo}
-          className="discord-logo"
-          alt="discord logo"
-        ></img>
-        <img
-          src={twitterLogo}
-          className="twitter-logo"
-          alt="twitter logo"
-        ></img>
-        <img
-          src={telegramLogo}
-          className="telegram-logo"
-          alt="telegram logo"
-        ></img>
-        <img
-          src={instagramLogo}
-          className="instagram-logo"
-          alt="instagram logo"
-        ></img>
+        <Link
+          to={"https://github.com/lucasstinson/"}
+          className="logo-link-container"
+        >
+          <img src={githubLogo} className="github-logo" alt="github logo"></img>
+          <img
+            src={discordLogo}
+            className="discord-logo"
+            alt="discord logo"
+          ></img>
+          <img
+            src={twitterLogo}
+            className="twitter-logo"
+            alt="twitter logo"
+          ></img>
+          <img
+            src={telegramLogo}
+            className="telegram-logo"
+            alt="telegram logo"
+          ></img>
+          <img
+            src={instagramLogo}
+            className="instagram-logo"
+            alt="instagram logo"
+          ></img>
+        </Link>
       </div>
       <div className="contact-address">
         <div className="contact-address-title">Address </div>
