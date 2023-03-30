@@ -115,6 +115,7 @@
 }
 
 .checkout-button {
+  width: 100%;
   padding: 8px 30px;
   border-radius: 5px;
   background-color: #24292f;
@@ -126,7 +127,6 @@
 }
 
 .checkout-button:hover {
-  transition: 0.3s;
   background-color: white;
   color: #24292f;
 }

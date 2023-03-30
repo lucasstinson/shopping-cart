@@ -12,6 +12,7 @@ import "./styles/Contact.css";
 import "./styles/Home.css";
 import "./styles/Nav.css";
 import "./styles/Cart.css";
+import "./styles/Checkout.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import amdCPU from "./assets/images/shop-items/amd-cpu.jpg";
 import motherboard from "./assets/images/shop-items/asus-mobo.jpg";
@@ -232,22 +233,38 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="/shop"
-            element={<Shop products={products} addToCart={addToCart} />}
+            element={
+              <Shop
+                products={products}
+                addToCart={addToCart}
+                decreaseQuantity={decreaseQuantity}
+              />
+            }
           />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/checkout"
+            element={
+              <Checkout
+                cart={cart}
+                total={cartTotal}
+                decreaseQuantity={decreaseQuantity}
+                addToCart={addToCart}
+              />
+            }
+          />
         </Routes>
         <Footer />
+        <Cart
+          products={products}
+          cart={cart}
+          total={cartTotal}
+          addToCart={addToCart}
+          decreaseQuantity={decreaseQuantity}
+          openCart={openCart}
+          toggleCart={toggleCart}
+        />
       </BrowserRouter>
-      <Cart
-        products={products}
-        cart={cart}
-        total={cartTotal}
-        addToCart={addToCart}
-        decreaseQuantity={decreaseQuantity}
-        openCart={openCart}
-        toggleCart={toggleCart}
-      />
     </div>
   );
 };

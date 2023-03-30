@@ -50,7 +50,13 @@ const Cart = (props) => {
         <div className="cart-items">{cartItems}</div>
         <div className="cart-buttons">
           <div className="total">Total: ${props.total}</div>
-          <button className="checkout-button">CHECK OUT</button>
+          <Link
+            to="/checkout"
+            className="checkout-link"
+            onClick={props.toggleCart}
+          >
+            <button className="checkout-button">CHECKOUT</button>
+          </Link>
           <button className="close-button" onClick={props.toggleCart}>
             CLOSE
           </button>
