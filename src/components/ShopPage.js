@@ -1,8 +1,11 @@
 import React from "react";
-// import amdCPU from "../assets/images/shop-items/amd-cpu.jpg";
 
 const ShopPage = (props) => {
-  console.log(props.products[0]);
+  const addItem = (e) => {
+    let productID = e.target.parentNode.dataset.itemId;
+    props.addToCart(productID);
+  };
+
   let shopItems = props.products.map((product) => (
     <div
       className="shop-item-container"
@@ -11,8 +14,10 @@ const ShopPage = (props) => {
     >
       <img src={product.image} className="item-image" alt={product.title}></img>
       <div className="item-title">{product.title}</div>
-      <div className="item-price">${product.price}</div>
-      <button className="item-add">Add to Cart</button>
+      <div className="item-price">${product.price.toFixed(2)}</div>
+      <button className="item-add" onClick={addItem}>
+        Add to Cart
+      </button>
     </div>
   ));
 

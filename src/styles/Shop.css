@@ -59,6 +59,12 @@
   transition-duration: 0.3s;
 }
 
+.item-add:active {
+  background-color: #24292f;
+  color: white;
+  transition-duration: 0.5s;
+}
+
 @media (max-width: 600px) {
   .shop-page-content {
     padding-top: 10px;

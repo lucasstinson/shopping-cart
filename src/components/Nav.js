@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import computer from "../assets/images/computer-tower.png";
 import shoppingBag from "../assets/images/shopping-bag.png";
 
-const Nav = () => {
+const Nav = (props) => {
+  const [visibile, setVisible] = useState("");
+  const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    let quantity = 0;
+    if (props.cart.length == 0) {
+      quantity = 0;
+    } else {
+      for (let i = 0; i < props.cart.length; i++) {
+        quantity += props.cart[i].quantity;
+      }
+    }
+    setQuantity(quantity);
+    if (quantity > 0) {
+      setVisible("cart-count");
+    } else {
+      setVisible("cart-count-hidden");
+    }
+  }, [props.cart]);
+
   return (
     <div className="nav-bar">
       <div className="nav-logo">
@@ -22,13 +42,13 @@ const Nav = () => {
         <Link to="/contact" className="contact">
           Contact
         </Link>
-        <div className="shopping-cart-container">
+        <div className="shopping-cart-container" onClick={props.toggleCart}>
           <img
             src={shoppingBag}
             className="shopping-bag"
             alt="shopping bag"
           ></img>
-          <div className="cart-count"></div>
+          <div className={visibile}>{quantity}</div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import ShopPage from "../components/ShopPage";
 const Shop = (props) => {
   return (
     <div className="shop-container">
-      <ShopPage products={props.products} />
+      <ShopPage products={props.products} addToCart={props.addToCart} />
     </div>
   );
 };

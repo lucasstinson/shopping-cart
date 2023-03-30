@@ -102,22 +102,18 @@ const App = () => {
     },
   ]);
 
-  const [cart, setCart] = useState([
-    {
-      id: 0,
-      title: "AMD Ryzen 7 5800X Processor",
-      price: 200,
-      image: amdCPU,
-      quantity: 2,
-    },
-  ]);
+  const [cart, setCart] = useState([]);
 
   const [cartTotal, setCartTotal] = useState(0);
 
   const total = () => {
     let value = 0;
-    for (let i = 0; i < cart.length; i++) {
-      value += cart[i].price * cart[i].quantity;
+    if (cart.length > 0) {
+      for (let i = 0; i < cart.length; i++) {
+        value += cart[i].price * cart[i].quantity;
+      }
+    } else {
+      value = 0;
     }
     setCartTotal(value.toFixed(2));
   };
@@ -126,32 +122,132 @@ const App = () => {
     total();
   }, [cart]);
 
-  const addItem = () => {
-    setCart([
-      ...cart,
-      {
-        id: 0,
-        title: "AMD Ryzen 7 5800X Processor",
-        price: 200.0,
-        image: amdCPU,
-        quantity: 1,
-      },
-    ]);
+  const addToCart = (productID) => {
+    let product = getProduct(productID);
+
+    // create a basic new product going to the cart
+    const newCartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    };
+
+    // if theres nothing in the cart, add the product
+    if (cart.length === 0) {
+      setCart([newCartItem]);
+      // else if this product is in the cart, update the quantity
+    } else if (isItemInCart(productID)) {
+      setCart(increaseQuantity(cart[cartIndex(productID)]));
+      // if its not in the cart, add the product to the cart
+    } else {
+      setCart([...cart, newCartItem]);
+    }
+  };
+
+  const getProduct = (productID) => {
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].id == productID) {
+        return products[i];
+      }
+    }
+  };
+
+  const cartIndex = (productID) => {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id == productID) {
+        return i;
+      }
+    }
+  };
+
+  const isItemInCart = (productID) => {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].id == productID) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const increaseQuantity = (product) => {
+    const newCartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: product.quantity + 1,
+    };
+
+    const firstSlice = cart.slice(0, cartIndex(product.id));
+    const secondSlice = cart.slice(cartIndex(product.id) + 1);
+
+    const newCart = [...firstSlice, newCartItem, ...secondSlice];
+    return newCart;
+  };
+
+  const decreaseQuantity = (productID) => {
+    // find the item in the cart by using the product ID
+    let productIndex = cartIndex(productID);
+    let product = cart[productIndex];
+
+    let newCartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: product.quantity - 1,
+    };
+
+    // once you get the object, decrease the quanity by 1
+    let newCart;
+    const firstSlice = cart.slice(0, productIndex);
+    const secondSlice = cart.slice(productIndex + 1);
+
+    // if the quantity == 0, remove the array
+    if (newCartItem.quantity == 0) {
+      newCart = [...firstSlice, ...secondSlice];
+    } else {
+      newCart = [...firstSlice, newCartItem, ...secondSlice];
+    }
+    setCart(newCart);
+  };
+
+  const [openCart, setOpenCart] = useState("cart-container-hidden");
+
+  const toggleCart = () => {
+    if (openCart == "cart-container-hidden") {
+      setOpenCart("cart-container");
+    } else {
+      setOpenCart("cart-container-hidden");
+    }
   };
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav />
+        <Nav cart={cart} toggleCart={toggleCart} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop products={products} />} />
+          <Route
+            path="/shop"
+            element={<Shop products={products} addToCart={addToCart} />}
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>
-      <Cart products={products} cart={cart} total={cartTotal} />
+      <Cart
+        products={products}
+        cart={cart}
+        total={cartTotal}
+        addToCart={addToCart}
+        decreaseQuantity={decreaseQuantity}
+        openCart={openCart}
+        toggleCart={toggleCart}
+      />
     </div>
   );
 };
