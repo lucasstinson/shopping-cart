@@ -10,7 +10,13 @@ The project is from The Odin Project [curriculum](https://www.theodinproject.com
 
 #### **Features:**
 
--
+- The computer shop allows a user to select to parts for a computer.
+- Navigate through the home page, shop page, contact page, cart and checkout page
+- Each part can be added or removed from their cart in multiple locations
+  1. Add any item from the shop page
+  1. Add or Remove any item from the shopping cart.
+  1. Add or Remove any item from the checkout page.
+- The subtotal of each individual item and total of all items are shown in the cart and on the checkout page.
 
 #### **Tools:**
 
@@ -24,7 +30,11 @@ The project is from The Odin Project [curriculum](https://www.theodinproject.com
 
 #### **Areas of Improvement:**
 
--
+- The styling is on the plain side and should be revamped for a better user experience.
+  1. Clicking add to cart should be more responsive to show an item was added to the cart.
+  2. When clicking the cart button, just appears. A slide transition would provide a smoother and less abrupt feel.
+  3. The links to pages on the nav bar have minimal styling.
+- The code could be refactored to remove any duplicate code.
 
 ### Assignment
 
