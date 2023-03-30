@@ -31,73 +31,73 @@ const App = () => {
     {
       id: 0,
       title: "AMD Ryzen 7 5800X Processor",
-      price: 199.99,
+      price: 200.0,
       image: amdCPU,
     },
     {
       id: 1,
       title: "ASUS Z790-H Motherboard",
-      price: 299.99,
+      price: 300.0,
       image: motherboard,
     },
     {
       id: 2,
       title: "Cooler Master CPU Cooler",
-      price: 59.99,
+      price: 60.0,
       image: heatSink,
     },
     {
       id: 3,
       title: "ASUS GeForce RTX 4090",
-      price: 1999.99,
+      price: 1450.0,
       image: gpu,
     },
     {
       id: 4,
       title: "Seagate 2TB Hard Drive",
-      price: 75.99,
+      price: 75.0,
       image: hardDrive,
     },
     {
       id: 5,
       title: "Glorious Mechanical Keyboard",
-      price: 119.99,
+      price: 120.0,
       image: keyboard,
     },
     {
       id: 6,
       title: "SanDisk 64GB MicroSD Memory",
-      price: 16.99,
+      price: 17.0,
       image: microSD,
     },
     {
       id: 7,
       title: 'HP X27qc 27" Curved Monitor',
-      price: 199.99,
+      price: 200.0,
       image: monitor,
     },
     {
       id: 8,
       title: "MSI Aegis Gaming PC",
-      price: 2399.99,
+      price: 2100.0,
       image: customPC,
     },
     {
       id: 9,
       title: "EVGA 850 Watt Power Supply",
-      price: 164.99,
+      price: 165.0,
       image: psu,
     },
     {
       id: 10,
       title: "Crucial 32GB DDR5-5200 RAM",
-      price: 134.99,
+      price: 135.0,
       image: ram,
     },
     {
       id: 11,
       title: "Razer Basilisk Wired Mouse",
-      price: 69.99,
+      price: 70.0,
       image: mouse,
     },
   ]);
@@ -106,11 +106,25 @@ const App = () => {
     {
       id: 0,
       title: "AMD Ryzen 7 5800X Processor",
-      price: 199.99,
+      price: 200,
       image: amdCPU,
-      count: 1,
+      quantity: 2,
     },
   ]);
+
+  const [cartTotal, setCartTotal] = useState(0);
+
+  const total = () => {
+    let value = 0;
+    for (let i = 0; i < cart.length; i++) {
+      value += cart[i].price * cart[i].quantity;
+    }
+    setCartTotal(value.toFixed(2));
+  };
+
+  useEffect(() => {
+    total();
+  }, [cart]);
 
   const addItem = () => {
     setCart([
@@ -118,9 +132,9 @@ const App = () => {
       {
         id: 0,
         title: "AMD Ryzen 7 5800X Processor",
-        price: 199.99,
+        price: 200.0,
         image: amdCPU,
-        count: 1,
+        quantity: 1,
       },
     ]);
   };
@@ -137,7 +151,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-      <Cart products={products} cart={cart} />
+      <Cart products={products} cart={cart} total={cartTotal} />
     </div>
   );
 };

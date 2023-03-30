@@ -2,7 +2,7 @@ import React from "react";
 // import amdCPU from "../assets/images/shop-items/amd-cpu.jpg";
 
 const ShopPage = (props) => {
-  console.log(props.products);
+  console.log(props.products[0]);
   let shopItems = props.products.map((product) => (
     <div
       className="shop-item-container"

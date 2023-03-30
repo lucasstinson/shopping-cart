@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow: scroll;
+  overflow-y: auto;
   padding-bottom: 10px;
 }
 
@@ -75,8 +75,12 @@
 .cart-buttons {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 80%;
+}
+
+.total {
+  font-weight: 700;
 }
 
 .checkout-button {
@@ -143,7 +147,6 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 300px));
     gap: 10px;
-    overflow: scroll;
   }
 
   .checkout-button,
@@ -154,18 +157,18 @@
   .cart-buttons {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 5px;
     width: 90%;
   }
 
   .cart-item img {
-    height: 80px;
+    height: 75px;
   }
 
   .cart-item {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    font-size: 14px;
+    font-size: 12px;
   }
 }
