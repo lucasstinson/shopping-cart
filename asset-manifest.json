@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.d2229596.css",
+    "main.js": "/shopping-cart/static/js/main.639f5940.js",
+    "static/media/instagram-logo.png": "/shopping-cart/static/media/instagram-logo.3b6e07b12ad08f0a7adb.png",
+    "static/media/computer-depot.jpeg": "/shopping-cart/static/media/computer-depot.42d0e5febd9953317b18.jpeg",
+    "static/media/psu.jpg": "/shopping-cart/static/media/psu.898ff8dc013deebdbdf6.jpg",
+    "static/media/cpu-heat-sink.jpg": "/shopping-cart/static/media/cpu-heat-sink.2070c70778bac524b0f2.jpg",
+    "static/media/monitor.jpg": "/shopping-cart/static/media/monitor.6a0bf6cd9389231d1a1b.jpg",
+    "static/media/pre-built.jpg": "/shopping-cart/static/media/pre-built.da2468a89e62d8e282c4.jpg",
+    "static/media/gpu.jpg": "/shopping-cart/static/media/gpu.6269a574752f05a994e9.jpg",
+    "static/media/ram-stick.jpg": "/shopping-cart/static/media/ram-stick.3e86a1a00789ef2ad4ac.jpg",
+    "static/media/amd-cpu.jpg": "/shopping-cart/static/media/amd-cpu.77fb33b91a45eb002ccb.jpg",
+    "static/media/hard-drive.jpg": "/shopping-cart/static/media/hard-drive.90c9b48194ab9dde6623.jpg",
+    "static/media/keyboard.jpg": "/shopping-cart/static/media/keyboard.6afe4206dfbbde3f708c.jpg",
+    "static/media/razer-mouse.jpg": "/shopping-cart/static/media/razer-mouse.d5df7173a716f28e7963.jpg",
+    "static/media/micro-sd.jpg": "/shopping-cart/static/media/micro-sd.356a9e5624000cc780b7.jpg",
+    "static/media/asus-mobo.jpg": "/shopping-cart/static/media/asus-mobo.8caa7b17c403eafa1688.jpg",
+    "static/media/telegram-logo.png": "/shopping-cart/static/media/telegram-logo.c6b84537faa2c5816ce3.png",
+    "static/media/twitter-logo.png": "/shopping-cart/static/media/twitter-logo.032995fbaa1e662693e6.png",
+    "static/media/discord-logo.jpeg": "/shopping-cart/static/media/discord-logo.fe4cdd68eac9e46debc6.jpeg",
+    "static/media/computer-tower.png": "/shopping-cart/static/media/computer-tower.64827556543a840c9ebb.png",
+    "static/media/github.png": "/shopping-cart/static/media/github.158bd288410e37d29232.png",
+    "static/media/github-black.png": "/shopping-cart/static/media/github-black.998f5c5da530d8c1edec.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.d2229596.css.map": "/shopping-cart/static/css/main.d2229596.css.map",
+    "main.639f5940.js.map": "/shopping-cart/static/js/main.639f5940.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2229596.css",
+    "static/js/main.639f5940.js"
+  ]
+}
