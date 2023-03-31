@@ -13,7 +13,7 @@ import "./styles/Home.css";
 import "./styles/Nav.css";
 import "./styles/Cart.css";
 import "./styles/Checkout.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import amdCPU from "./assets/images/shop-items/amd-cpu.jpg";
 import motherboard from "./assets/images/shop-items/asus-mobo.jpg";
 import heatSink from "./assets/images/shop-items/cpu-heat-sink.jpg";
@@ -227,7 +227,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Nav cart={cart} toggleCart={toggleCart} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -264,7 +264,7 @@ const App = () => {
           openCart={openCart}
           toggleCart={toggleCart}
         />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
