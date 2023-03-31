@@ -14,7 +14,7 @@
 
 .checkout-items-container {
   display: grid;
-  gap: 30px;
+  gap: 10px;
   grid-template-columns: repeat(4, minmax(100px, 300px));
   justify-content: center;
   align-content: center;
@@ -36,7 +36,7 @@
 }
 
 .checkout-item-container img {
-  height: 150px;
+  height: 120px;
   margin: auto;
 }
 
@@ -46,7 +46,7 @@
 
 .checkout-item-price {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .checkout-quantity-details-container {
@@ -147,7 +147,7 @@
   }
 
   .checkout-item-container img {
-    height: 150px;
+    height: 100px;
     margin: auto;
   }
 
@@ -182,7 +182,7 @@
   }
 
   .checkout-item-container img {
-    height: 150px;
+    height: 100px;
     margin: auto;
   }
 

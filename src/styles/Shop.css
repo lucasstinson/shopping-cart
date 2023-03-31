@@ -7,7 +7,7 @@
 
 .shop-items-container {
   display: grid;
-  gap: 30px;
+  gap: 10px;
   grid-template-columns: repeat(4, minmax(100px, 300px));
   justify-content: center;
   align-content: center;
@@ -29,7 +29,7 @@
 }
 
 .shop-item-container img {
-  height: 150px;
+  height: 120px;
   margin: auto;
 }
 
@@ -39,7 +39,7 @@
 
 .item-price {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .item-add {
@@ -47,7 +47,7 @@
   border-radius: 5px;
   background-color: #24292f;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   border: 2px solid #24292f;
   margin-bottom: 10px;
@@ -83,7 +83,7 @@
   }
 
   .shop-item-container img {
-    height: 150px;
+    height: 100px;
     margin: auto;
   }
 }
@@ -102,7 +102,7 @@
   }
 
   .shop-item-container img {
-    height: 150px;
+    height: 100px;
     margin: auto;
   }
 }
