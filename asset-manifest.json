@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.d2229596.css",
+    "main.css": "/shopping-cart/static/css/main.1df5916a.css",
     "main.js": "/shopping-cart/static/js/main.9a4981c4.js",
     "static/media/instagram-logo.png": "/shopping-cart/static/media/instagram-logo.3b6e07b12ad08f0a7adb.png",
     "static/media/computer-depot.jpeg": "/shopping-cart/static/media/computer-depot.42d0e5febd9953317b18.jpeg",
@@ -23,11 +23,11 @@
     "static/media/github.png": "/shopping-cart/static/media/github.158bd288410e37d29232.png",
     "static/media/github-black.png": "/shopping-cart/static/media/github-black.998f5c5da530d8c1edec.png",
     "index.html": "/shopping-cart/index.html",
-    "main.d2229596.css.map": "/shopping-cart/static/css/main.d2229596.css.map",
+    "main.1df5916a.css.map": "/shopping-cart/static/css/main.1df5916a.css.map",
     "main.9a4981c4.js.map": "/shopping-cart/static/js/main.9a4981c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2229596.css",
+    "static/css/main.1df5916a.css",
     "static/js/main.9a4981c4.js"
   ]
 }
