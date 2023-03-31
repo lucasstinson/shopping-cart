@@ -12,9 +12,9 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/shopp
 
 #### **Features:**
 
-- The computer shop allows a user to select to parts for a computer.
-- Navigate through the home page, shop page, contact page, cart and checkout page
-- Each part can be added or removed from their cart in multiple locations
+- The computer shop allows a user to browse through computer parts and add or remove them from their cart based on their needs.
+- Navigate through the home page, shop page, contact page, cart and checkout page.
+- Each computer part can be added or removed from their cart in multiple locations.
   - Add any item from the shop page
   - Add or Remove any item from the shopping cart.
   - Add or Remove any item from the checkout page.
