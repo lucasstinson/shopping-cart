@@ -6,6 +6,8 @@ A simple fake store with a shopping cart. This application uses React hooks and 
 
 The project is from The Odin Project [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart), or see the Assignment Below.
 
+A **live preview** of the project is [here](https://lucasstinson.github.io/shopping-cart/).
+
 ### Overview
 
 #### **Features:**
