@@ -19,6 +19,7 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/shopp
   1. Add or Remove any item from the shopping cart.
   1. Add or Remove any item from the checkout page.
 - The subtotal of each individual item and total of all items are shown in the cart and on the checkout page.
+- Mobile friendly!
 
 #### **Tools:**
 
